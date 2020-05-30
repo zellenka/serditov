@@ -1,17 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
+import "normalize.css"
+// import { Link as LinkGatsby } from "gatsby"
+// import TitleHeader from "../components/header"
+import MainLogo from "../components/logo"
+import headerStyles from "../components/header.module.css"
+import MainNavigation from "../components/main-nav"
+import { Title, Link, Meta } from "react-head"
 
 
+
+const Seo = () => (
+  <>
+    <Title>Serditov architect</Title>
+    <Meta name="description" content="Anton Serditov architect" />
+    <Link rel="canonical" content="https://serditov.com/" />
+  </>
+);
 
 export default function Home() {
   return (
-    <div style={{ color: `purple` }}>
-      <Link to="/contact/">Contact</Link>
-      <Header headerText="Hello Gatsby!" />
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
+    <header className={headerStyles.mainHeader}>
+      <Seo />
+      <MainLogo />
+      <MainNavigation />
 
-    </div>
+      {/* <TitleHeader headerText="Serditov"/> */}
+    </header>
   );
 }
