@@ -1,13 +1,19 @@
 import React from "react"
-import Header from "../components/header"
+import { Title, Link, Meta } from "react-head";
+import Layout from '../components/layout'
+
+const Seo = () => (
+  <>
+    <Title>About Serditov architect</Title>
+    <Meta name="description" content="About Anton Serditov architect" />
+    <Link rel="canonical" content="https://serditov.com/" />
+  </>
+);
 
 export default function About() {
   return (
-    <div style={{ color: `teal` }}>
-      <Header headerText="About Gatsby" />
-      <Header headerText="It's pretty cool" />
-
-      <p>Such wow. Very React.</p>
-    </div>
-  )
+    <Layout > 
+      <Seo />
+    </Layout>
+  );
 }
