@@ -1,7 +1,5 @@
 import React from "react";
-// CSS
-import "normalize.css";
-import Header from './header/';
+import Header from './header/header';
 
 const Layout = ({ children }, props) => {
   console.log(props)
