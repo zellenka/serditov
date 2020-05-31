@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import { Title, Link, Meta } from "react-head";
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, DotGroup, Dot } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, Dot } from 'pure-react-carousel';
 
 
 const Seo = () => (
@@ -24,7 +24,6 @@ class CarouselSlider extends React.Component {
         visibleSlides={3}
         step={1}
       >
-        {/* <DotGroup /> */}
         <div className="dots">
           <Dot disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/the_residence.jpg" />} slide={0} />
           <Dot disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" />} slide={1} />
@@ -46,9 +45,10 @@ class CarouselSlider extends React.Component {
   }
 }
 
-const Showcase = () => {
+const Showcase = ({location}) => {
+
   return (
-    <Layout showcase={true}>
+    <Layout location={location}>
       <Seo />
       <CarouselSlider />
       <p>Such wow. Very React.</p>

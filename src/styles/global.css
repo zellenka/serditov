@@ -6,3 +6,14 @@ html {
 .dots {
   display: flex;
 }
+
+.button__thumbnails {
+  display: none;
+}
+
+.page-showcase .button__thumbnails {
+  display: block;
+  position: fixed;
+  left: 300px;
+  top: 10px;
+}
