@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { Title, Link, Meta } from "react-head";
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 const Seo = () => (
   <>
@@ -10,9 +10,9 @@ const Seo = () => (
   </>
 );
 
-export default function About() {
+export default function About({ location }) {
   return (
-    <Layout > 
+    <Layout location={location}> 
       <Seo />
     </Layout>
   );

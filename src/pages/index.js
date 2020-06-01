@@ -10,10 +10,12 @@ const Seo = () => (
   </>
 );
 
-export default function Home() {
+ const Home = ({location}) => {
   return (
-    <Layout > 
+    <Layout location={location}> 
       <Seo />
     </Layout>
   );
 }
+
+export default Home
