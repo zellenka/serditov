@@ -16,12 +16,14 @@ html {
 
 .dots {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 .dots .thumbnail__button {
   display: block;
-  width: calc(100%/8);
+  height: 150px;
+  width: auto;
+  max-width: calc(100%/8);
 }
 
 .thumbnail__button {
@@ -30,4 +32,8 @@ html {
   background: #000;
   border: none;
   outline: none;
+}
+
+.thumbnail__button img {
+  width: auto;
 }
