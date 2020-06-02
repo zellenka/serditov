@@ -20,24 +20,29 @@ class CarouselSlider extends React.Component {
       <CarouselProvider
         naturalSlideWidth={140}
         naturalSlideHeight={120}
-        totalSlides={5}
+        totalSlides={6}
         visibleSlides={3}
         step={1}
+        isIntrinsicHeight={true}
       >
         <div className="dots">
           <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/the_residence.jpg" />} slide={0} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" />} slide={1} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" />} slide={2} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" />} slide={3} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" />} slide={4} />
+          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_avant_garde_tower_09.jpg" />} slide={1} />
+          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" />} slide={2} />
+          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" />} slide={3} />
+          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" />} slide={4} />
+          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" />} slide={5} />
+          
         </div>
         
         <Slider>
           <Slide index={0}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/the_residence.jpg" /></Slide>
-          <Slide index={1}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" /></Slide>
-          <Slide index={2}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" /></Slide>
-          <Slide index={3}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" /></Slide>
-          <Slide index={4}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" /></Slide>
+          <Slide index={1}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_avant_garde_tower_09.jpg" /></Slide>
+          <Slide index={2}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" /></Slide>
+          <Slide index={3}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" /></Slide>
+          <Slide index={4}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" /></Slide>
+          <Slide index={5}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" /></Slide>
+          
         </Slider>
         <ButtonBack>Back</ButtonBack>
         <ButtonNext>Next</ButtonNext>
