@@ -10,7 +10,7 @@ const Header = (props) => {
     <header className={`${headerStyles.mainHeader} ${toggleNav ? headerStyles.menuOpened : ``} `}>
 
     <div className={headerStyles.animatedHeader}>
-      <Link to="/" className={headerStyles.logo}>
+      <Link to="/" className={headerStyles.logo} >
         <span className={headerStyles.logo__title}>serditov</span>
         <span className={headerStyles.logo__subtitle}>Interior design & architecture</span>
       </Link>
@@ -19,7 +19,7 @@ const Header = (props) => {
       <nav className={headerStyles.mainNav}>
         <ul>
           <li><Link activeClassName={headerStyles.active} to="/about">About</Link></li>
-          <li><Link activeClassName={headerStyles.active} state={{open: false}} to="/showcase">Showcase</Link></li>
+          <li><Link activeClassName={headerStyles.active} to="/showcase">Showcase</Link></li>
           <li><Link activeClassName={headerStyles.active} to="/">Portfolio</Link></li>
           <li><Link activeClassName={headerStyles.active} to="/">Services</Link></li>
           <li><Link activeClassName={headerStyles.active} to="/contact">Contact</Link></li>
