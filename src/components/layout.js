@@ -4,8 +4,8 @@ import Header from "./header/header";
 const Layout = ({ location, children }) => {
 
   let pageClass = '';
-  location.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
-
+  location.state.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
+  
   return (
     <div className={`page${pageClass}`}>
       <Header />

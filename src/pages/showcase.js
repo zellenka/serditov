@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "../components/layout";
 import { Title, Link, Meta } from "react-head";
-import 'pure-react-carousel/dist/react-carousel.es.css';
-
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image, Dot } from 'pure-react-carousel';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import Images from '../../src/imageSorce';
 
 
 const Seo = () => (
@@ -14,50 +15,47 @@ const Seo = () => (
   </>
 );
 
-class CarouselSlider extends React.Component {
+let sliderImages = Images.map((imageURL, i) => {
+  return (
+    <div key={i}>
+      <img src={imageURL} alt={''}/>
+    </div>
+  )
+})
+
+class SimpleSlider extends React.Component {
   render() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      centerMode: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: true,
+      customPaging: function (i) {
+        return (
+          <a>
+            <img src={Images[i]} />
+          </a>
+        );
+      }
+    }
     return (
-      <CarouselProvider
-        naturalSlideWidth={140}
-        naturalSlideHeight={120}
-        totalSlides={6}
-        visibleSlides={3}
-        step={1}
-        isIntrinsicHeight={true}
-      >
-        <div className="dots">
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/the_residence.jpg" />} slide={0} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_avant_garde_tower_09.jpg" />} slide={1} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" />} slide={2} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" />} slide={3} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" />} slide={4} />
-          <Dot className={'thumbnail__button'} disabled={false} children={<Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" />} slide={5} />
-          
-        </div>
-        
-        <Slider>
-          <Slide index={0}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/the_residence.jpg" /></Slide>
-          <Slide index={1}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_avant_garde_tower_09.jpg" /></Slide>
-          <Slide index={2}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_20.jpg" /></Slide>
-          <Slide index={3}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_01-375x250.jpg" /></Slide>
-          <Slide index={4}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_frognal_way_12.jpg" /></Slide>
-          <Slide index={5}><Image src="http://www.honky.co.uk/site/wp-content/uploads/2015/04/ab_knights_wood_10-RT-375x250.jpg" /></Slide>
-          
-        </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider>
+      <Slider {...settings}>
+        {sliderImages}
+      </Slider>
     );
   }
 }
 
-const Showcase = ({location}) => {
+const Showcase = ({ location }) => {
 
   return (
     <Layout location={location}>
       <Seo />
-      <CarouselSlider />
-      </Layout>
+      <SimpleSlider />
+    </Layout>
   )
 }
 
