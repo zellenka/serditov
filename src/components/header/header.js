@@ -20,8 +20,8 @@ const Header = (props) => {
         <ul>
           <li><Link activeClassName={headerStyles.active} to="/about">About</Link></li>
           <li><Link activeClassName={headerStyles.active} to="/showcase">Showcase</Link></li>
-          <li><Link activeClassName={headerStyles.active} to="/">Portfolio</Link></li>
-          <li><Link activeClassName={headerStyles.active} to="/">Services</Link></li>
+          <li><Link activeClassName={headerStyles.active} to="/portfolio">Portfolio</Link></li>
+          <li><Link activeClassName={headerStyles.active} to="/services">Services</Link></li>
           <li><Link activeClassName={headerStyles.active} to="/contact">Contact</Link></li>
         </ul>
       </nav>

@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./header/header";
 
-const Layout = ({ loca, children }) => {
+const Layout = ({ location, children }) => {
 
   let pageClass = '';
-  loca.pathname === '/' ? pageClass = '-main' : pageClass = loca.pathname.replace('/', '-');
+  location.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
   
   return (
     <div className={`page${pageClass}`}>

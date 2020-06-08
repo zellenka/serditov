@@ -20,15 +20,8 @@ body * {
   transform: translateY(-100%);
 }
 .main-header::after{
-  content: 'псс... это затемнялка контента';
-  -webkit-filter: blur(2px);
-          filter: blur(2px);
-  font-size: 60px;
-  color: rgb(23, 23, 23);
-  font-weight: 900;
-  text-transform: uppercase;
-  /* content: ''; */
-  background-color: rgb(63, 63, 63);
+  content: '';
+  background-color: rgb(100, 100, 100);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -84,7 +77,7 @@ body * {
 }
 .menu-opened.main-header::after{
   display: block;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   transform: translateY(100%);
   -webkit-animation: fadeIn;

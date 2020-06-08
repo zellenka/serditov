@@ -13,7 +13,7 @@ const Seo = () => (
 
 export default function About({ location }) {
   return (
-    <Layout loca={location}> 
+    <Layout location={location}> 
       <Seo />
       <TabsVertical />
     </Layout>
