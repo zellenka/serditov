@@ -1,7 +1,6 @@
 import React from 'react'
 import { Tabs, Tab, Panel } from '@bumaga/tabs' 
 import tabsStyles from "./tabs.module.css";
-import { Link } from "gatsby";
 // import Images from '../../../src/imageSorce';
 
 
@@ -12,7 +11,7 @@ const TabsVertical = () => (
         <Tab>
           <li className={tabsStyles.tabsList__item}>
             {/* <button className={tabsStyles.tabsList__item-button}> */}
-            <Link to="/" className={tabsStyles.tabsList__itemLink} >Profile</Link>
+            <a href="#tab1" className={tabsStyles.tabsList__itemLink} >Profile</a>
             {/* </button> */}
           </li>
         </Tab>
@@ -20,7 +19,7 @@ const TabsVertical = () => (
         <Tab>
           <li className={tabsStyles.tabsList__item}>
             {/* <button className={tabsStyles.tabsList__item-button}> */}
-            <Link to="/" className={tabsStyles.tabsList__itemLink} >Experience</Link>
+            <a href="#tab2" className={tabsStyles.tabsList__itemLink} >Experience</a>
             {/* </button> */}
           </li>
         </Tab>
@@ -28,7 +27,7 @@ const TabsVertical = () => (
         <Tab>
           <li className={tabsStyles.tabsList__item}>
             {/* <button className={tabsStyles.tabsList__item-button}> */}
-            <Link to="/" className={tabsStyles.tabsList__itemLink} >Personality</Link>
+            <a href="#tab3" className={tabsStyles.tabsList__itemLink} >Personality</a>
             {/* </button> */}
           </li>
         </Tab>
@@ -36,23 +35,24 @@ const TabsVertical = () => (
 
       <Panel>
         <div className={tabsStyles.tabsText}>
+          <p>Text 1</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
         </div>
-        <div className={tabsStyles.tabsImg}><span>Image Title-1</span><img alt="tab show" src='https://source.unsplash.com/random#500x1000'></img></div>
+        <div className={tabsStyles.tabsImg}><img src='https://source.unsplash.com/random#500x1000' alt="tab show"></img></div>
       </Panel>
 
       <Panel>
         <div className={tabsStyles.tabsText}>
-          <p>Text</p>
+          <p>Text 2</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
         </div>
-        <div className={tabsStyles.tabsImg}><span>Image Title-2</span><img alt="tab show" src='https://source.unsplash.com/random#500x1000'></img></div>
+        <div className={tabsStyles.tabsImg}><img src='https://source.unsplash.com/random#500x1000' alt="tab show"></img></div>
       </Panel>
 
       <Panel>
         <div className={tabsStyles.tabsText}>
-          <p>Text</p>
+          <p>Text 3</p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
@@ -60,7 +60,7 @@ const TabsVertical = () => (
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic blanditiis, aut voluptas quibusdam maxime expedita quaerat quo consequuntur laboriosam numquam sunt eos, fugit minima. Obcaecati quibusdam accusantium blanditiis provident labore. </p>
         </div>
-        <div className={tabsStyles.tabsImg}><span>Image Title-3</span><img alt="tab show" src='https://source.unsplash.com/random#500x1000'></img></div>
+        <div className={tabsStyles.tabsImg}><img src='https://source.unsplash.com/random#500x1000' alt="tab show"></img></div>
       </Panel>
 
 
