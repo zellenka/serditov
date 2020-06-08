@@ -35,8 +35,8 @@ class SimpleSlider extends React.Component {
       variableWidth: true,
       customPaging: function (i) {
         return (
-          <a>
-            <img src={Images[i]} />
+          <a href>
+            <img alt={''} src={Images[i]} />
           </a>
         );
       }
@@ -52,7 +52,7 @@ class SimpleSlider extends React.Component {
 const Showcase = ({ location }) => {
 
   return (
-    <Layout location={location}>
+    <Layout loca={location}>
       <Seo />
       <SimpleSlider />
     </Layout>

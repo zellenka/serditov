@@ -12,7 +12,7 @@ const Seo = () => (
 
 const Contact = ({location}) => {
   return (
-    <Layout location={location}>
+    <Layout loca={location}>
       <Seo />
       <p>Send us a message!</p>
     </Layout>
