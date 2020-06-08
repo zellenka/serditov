@@ -1,0 +1,39 @@
+.tabs{
+  display: grid;
+  grid-template-columns: 40% 60%; 
+  grid-template-areas: 
+  "one three"
+  "two three";
+  align-items: flex-start;
+}
+
+.tabs-content{
+  grid-area: one;
+}
+
+.tabs-text{
+  grid-area: two;
+  grid-row-end: none;
+}
+
+.tabs-img{
+  grid-area: three;
+
+}
+
+.tabs-list{
+  list-style: none;
+  background-color: red;
+}
+
+.tabs-list__item{
+
+}
+
+.tabs-list__item-button{
+
+}
+
+.tabs-list__item-link{
+  background-color: blue;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Title, Link, Meta } from "react-head";
 import Layout from '../components/layout';
+import TabsVertical from '../components/tabs/tabs'
 
 const Seo = () => (
   <>
@@ -12,8 +13,9 @@ const Seo = () => (
 
 export default function About({ location }) {
   return (
-    <Layout location={location}> 
+    <Layout loca={location}> 
       <Seo />
+      <TabsVertical />
     </Layout>
   );
 }
