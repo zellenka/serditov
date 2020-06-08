@@ -43,7 +43,7 @@ class SimpleSlider extends React.Component {
  const Home = ({location}) => {
   
   return (
-    <Layout loca={location}> 
+    <Layout location={location}> 
       <Seo />
       <SimpleSlider />
     </Layout>

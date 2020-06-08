@@ -15,7 +15,7 @@ const Seo = () => (
 
 const Error404 = ({location}) => {
   return (
-    <Layout loca={location}> 
+    <Layout location={location}> 
       <Seo />
       <h1>404 - page not found</h1>
       <LinkGatsby to="/">BACK</LinkGatsby>

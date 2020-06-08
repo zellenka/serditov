@@ -52,7 +52,7 @@ class SimpleSlider extends React.Component {
 const Showcase = ({ location }) => {
 
   return (
-    <Layout loca={location}>
+    <Layout location={location}>
       <Seo />
       <SimpleSlider />
     </Layout>
