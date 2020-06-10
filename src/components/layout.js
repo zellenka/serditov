@@ -1,15 +1,25 @@
 import React from "react";
 import Header from "./header/header";
 
-const Layout = ({ location, children }) => {
+const Layout = (props) => {
 
   let pageClass = '';
-  location.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
+  props.location.pathname === '/' ? pageClass = '-main' : pageClass = props.location.pathname.replace('/', '-');
+  
+  const [thumbnails, toggleThumbnails] = React.useState(props.thumb);
+
+  const thumbnailsToggler = () => toggleThumbnails(!thumbnails);
+
+  console.log(thumbnails);
+
+  useEffect(() => {
+    props.thumb ? toggleThumbnails(false)
+  });
   
   return (
-    <div className={`page${pageClass}`}>
-      <Header />
-      {children}
+    <div className={`page${pageClass} ${thumbnails  ? 'thumbnails_opened' : ``}`}>
+      <Header clickHandler={thumbnailsToggler}/>
+      {props.children }
     </div>
   )
 }

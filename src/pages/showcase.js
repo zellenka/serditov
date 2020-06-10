@@ -25,6 +25,8 @@ let sliderImages = Images.map((imageURL, i) => {
 
 class SimpleSlider extends React.Component {
   render() {
+    console.log(this.props);
+    
     var settings = {
       dots: true,
       infinite: true,
@@ -33,6 +35,8 @@ class SimpleSlider extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
+      draggable:true,
+      beforeChange: (currentIndex, nextIndex) => this.props.thumb(),
       customPaging: function (i) {
         return (
           <a href>
@@ -49,12 +53,19 @@ class SimpleSlider extends React.Component {
   }
 }
 
+
+
 const Showcase = ({ location }) => {
 
+const [thumbnails, closeThumbnails] = React.useState(false);
+
+const thumbnailsToggler = () => closeThumbnails(false);
+
+
   return (
-    <Layout location={location}>
+    <Layout location={location} thumb={thumbnails}>
       <Seo />
-      <SimpleSlider />
+      <SimpleSlider thumb={thumbnailsToggler}/>
     </Layout>
   )
 }
