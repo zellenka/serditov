@@ -8,7 +8,7 @@ const Header = (props) => {
     
   return (
 
-    <header className={`${headerStyles.mainHeader} ${toggleNav ? headerStyles.menuOpened : ``} `}>
+    <header className={`${headerStyles.mainHeader} ${toggleNav || props.page === '-main' ? headerStyles.menuOpened : ``} `}>
     
     <div className={headerStyles.animatedHeader}>
       <Link to="/" className={headerStyles.logo} >

@@ -60,3 +60,11 @@ top: 10px;
 .page-main header:after {
   content: none;
 }
+
+#gatsby-focus-wrapper > div:not(.page-showcase) .thumbnails {
+  display: none;
+}
+
+.slick-list {
+  height: 100vh;
+}

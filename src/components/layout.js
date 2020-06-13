@@ -11,7 +11,7 @@ const Layout = (props) => {
     <myContext.Consumer>
       {context => (
         <div className={`page${pageClass} ${context.isOpenThumbnails ? 'thumbnails_opened' : ``}`}>
-          <Header clickHandler={context.toggleThumbnails}/>
+          <Header clickHandler={context.toggleThumbnails} page={pageClass}/>
           {props.children}
         </div>
       )
