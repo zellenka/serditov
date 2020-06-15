@@ -3,8 +3,10 @@ html {
   color: white;
 }
 
-.button__thumbnails {
-  display: none;
+.thumbnails {
+position: fixed;
+left: 20%;
+top: 10px;
 }
 
 .page-showcase .slick-dots {
@@ -13,7 +15,15 @@ html {
   top: 50px;
   width: 100%;
   flex-wrap: wrap;
-  height: 70vh;
+  height: 100vh;
+  top: -3000px;
+  transition: all .5s;
+  background: #000;
+}
+
+.thumbnails_opened.page-showcase .slick-dots {
+  top: 50px;
+  transition: all .5s;
 }
 
 .page-showcase .slick-dots li {
@@ -49,4 +59,12 @@ html {
 
 .page-main header:after {
   content: none;
+}
+
+#gatsby-focus-wrapper > div:not(.page-showcase) .thumbnails {
+  display: none;
+}
+
+.slick-list {
+  height: 100vh;
 }

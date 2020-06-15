@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Images from '../../src/imageSorce';
+import { myContext } from '../../provider';
 
 
 const Seo = () => (
@@ -18,7 +19,7 @@ const Seo = () => (
 let sliderImages = Images.map((imageURL, i) => {
   return (
     <div key={i}>
-      <img src={imageURL} alt={''}/>
+      <img src={imageURL} alt={''} />
     </div>
   )
 })
@@ -33,6 +34,10 @@ class SimpleSlider extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       variableWidth: true,
+      draggable: true,
+      beforeChange: (currentIndex, nextIndex) => {if(this.props.thumbState) {
+        this.props.thumb()
+      }},
       customPaging: function (i) {
         return (
           <a href>
@@ -52,9 +57,13 @@ class SimpleSlider extends React.Component {
 const Showcase = ({ location }) => {
 
   return (
-    <Layout location={location}>
+    <Layout location={location} >
       <Seo />
-      <SimpleSlider />
+      <myContext.Consumer>
+        {context => (
+          <SimpleSlider thumb={context.toggleThumbnails} thumbState={context.isOpenThumbnails}/>
+        )}
+      </myContext.Consumer>
     </Layout>
   )
 }

@@ -1,16 +1,22 @@
 import React from "react";
 import Header from "./header/header";
+import { myContext } from '../../provider';
 
-const Layout = ({ location, children }) => {
+const Layout = (props) => {
 
   let pageClass = '';
-  location.pathname === '/' ? pageClass = '-main' : pageClass = location.pathname.replace('/', '-');
-  
+  props.location.pathname === '/' ? pageClass = '-main' : pageClass = props.location.pathname.replace('/', '-');
+
   return (
-    <div className={`page${pageClass}`}>
-      <Header />
-      {children}
-    </div>
+    <myContext.Consumer>
+      {context => (
+        <div className={`page${pageClass} ${context.isOpenThumbnails ? 'thumbnails_opened' : ``}`}>
+          <Header clickHandler={context.toggleThumbnails} page={pageClass}/>
+          {props.children}
+        </div>
+      )
+      }
+    </myContext.Consumer>
   )
 }
 
